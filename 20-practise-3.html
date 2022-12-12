@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="user/register" method="get">
+      <table border="1">
+        <tr>
+          <td><label for="eposta">E-Posta</label></td>
+          <td><input type="email" name="" id="eposta" /></td>
+        </tr>
+        <tr>
+          <td><label for="sifre">Şifre</label></td>
+          <td><input type="password" name="" id="sifre"></td>
+        </tr>
+        <tr>
+          <td><label for="gkod">Güvenlik Kodu</label></td>
+          <td><input type="text" name="" id="gkod" value="ABC" readonly></td>
+        </tr>
+        <tr>
+
+          <th colspan="2">
+            <input type="submit" value="Kaydet" disabled> &nbsp;
+            <input type="reset" value="Temizle">
+          </th>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

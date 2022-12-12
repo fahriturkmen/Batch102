@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/web-analytics.png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>Ürünlerimiz</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="left">
+        <h2>Ürünler</h2>
+        <ul id="myMenu">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <div class="dropup">
+            <button class="dropbtn">Ürünler</button>
+            <div class="dropup-content">
+              <a href="urunler.html#notebook">Notebook</a>
+              <a href="urunler.html#monitor">Monitör</a>
+              <a href="urunler.html#klavye">Klavye</a>
+            </div>
+          </div>
+          <li><a href="https://wordpress.org/" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="dersprogrami.html">Ders Programı</a></li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="assets/Notebook.jpg" alt="" />
+          <img class="mySlides" src="assets/Monitor.jpg" alt="" />
+          <img class="mySlides" src="assets/Klavye.jpg" alt="" />
+
+          <button
+            class="w3-button w3-black w3-display-left"
+            onclick="plusDivs(-1)"
+          >
+            &#10094;
+          </button>
+          <button
+            class="w3-button w3-black w3-display-right"
+            onclick="plusDivs(1)"
+          >
+            &#10095;
+          </button>
+        </div>
+        <div class="row"><a href="assets/Computer_and_Computer_Parts_Classification.pdf" target="_blank">Ürün Kataloğu</a></div>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+    <script>
+      window.onload = function () {
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        if (window.location.href.endsWith("notebook")) {
+          x[0].style.display = "block";
+        } else if (window.location.href.endsWith("monitor")) {
+          x[1].style.display = "block";
+        } else {
+          x[2].style.display = "block";
+        }
+      };
+    </script>
+  </body>
+</html>

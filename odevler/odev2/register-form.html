@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt İşlemleri</title>
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2" style="background-color: rgb(67, 75, 185)">
+              KAYIT FORMU
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="adsoyad">Adı ve Soyadı:</label></td>
+            <td>
+              <input
+                type="text"
+                name="adsoyad"
+                id="adsoyad"
+                minlength="4"
+                max="30"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dtarih">Doğum Tarihi:</label></td>
+            <td>
+              <input
+                type="date"
+                name="dtarih"
+                id="dtarih"
+                max="2004-01-01"
+                min="1945-01-01"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="eposta">E-Posta:</label></td>
+            <td><input type="email" name="eposta" id="eposta" required /></td>
+          </tr>
+          <tr>
+            <td><label for="pwd">Şifre:</label></td>
+            <td><input type="password" name="pwd" id="pwd" minlength="8" maxlength="30" required /></td>
+          </tr>
+          <tr>
+            <th colspan="2" style="background-color: rgb(67, 75, 185)">
+              <input type="submit" value="Gönder" /> &nbsp;
+              <input type="reset" value="Temizle" />
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
